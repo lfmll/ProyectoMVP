@@ -1,13 +1,16 @@
 package com.example.luisfernandomedinallorenti.proyectomvp;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+public interface MainActivity {
 
-public class MainActivity extends AppCompatActivity {
+    interface View{
+        void showResult(String s);
+    }
+    interface Presenter{
+        void showResult(String s);
+        void addName(String s);
+    }
+    interface Model{
+        void addName(String s);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
     }
 }
