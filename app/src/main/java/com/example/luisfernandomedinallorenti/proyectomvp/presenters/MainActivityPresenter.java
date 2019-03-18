@@ -9,15 +9,19 @@ public class MainActivityPresenter implements MainActivity.Presenter {
     //Constructor
     public MainActivityPresenter(MainActivity.View view){
         this.view=view;
-        model= MainActivityModel(this);
+        model= new MainActivityModel(this);
     }
     @Override
     public void showResult(String s) {
-
+        if (view!=null){
+            view.showResult(s);
+        }
     }
 
     @Override
     public void addName(String s) {
-
+        if (view!=null){
+            model.addName(s);
+        }
     }
 }
